@@ -1,0 +1,331 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #0d1117;
+    --light-bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --border-color: rgba(0, 0, 0, 0.125);
+    --text-color: #212529;
+    --muted-text: #6c757d;
+    --success-color: #198754;
+    --language-badge-bg: #e9ecef;
+    --contributor-bar-bg: #dfe2e5;
+    --contributor-bar-fill: #2563eb;
+}
+
+body {
+    background-color: var(--light-bg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-color);
+    padding-bottom: 2rem;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--secondary-color);
+    padding: 1rem 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+/* Container and general styling */
+.container {
+    max-width: 1200px;
+}
+
+h1, h2, h3 {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.display-4 {
+    font-weight: 700;
+}
+
+/* Cards */
+.card {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card .card-header {
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 1.5rem;
+}
+
+.custom-card .card-header h3 {
+    margin-bottom: 0;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+}
+
+.custom-card .card-body {
+    padding: 1.5rem;
+}
+
+.search-card {
+    margin-bottom: 2rem;
+}
+
+.analyze-btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 500;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    transition: all 0.2s;
+}
+
+.analyze-btn:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+    transform: translateX(3px);
+}
+
+.input-group-text {
+    border-color: #ced4da;
+}
+
+/* Repository Header */
+.repo-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.repo-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.repo-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.repo-description {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 8px;
+    font-style: italic;
+    border-left: 4px solid var(--primary-color);
+}
+
+/* List styling */
+.custom-list .list-group-item {
+    padding: 0.75rem 0;
+    border-color: #f0f0f0;
+    background-color: transparent;
+}
+
+.language-badge {
+    background-color: var(--language-badge-bg);
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.35rem 0.75rem;
+    border-radius: 1rem;
+}
+
+.branch-badge {
+    background-color: #e9ecef;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.35rem 0.75rem;
+    border-radius: 1rem;
+}
+
+/* Stats cards */
+.stats-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+    transition: transform 0.2s;
+}
+
+.stats-card:hover {
+    transform: translateY(-3px);
+}
+
+.stats-icon {
+    background-color: rgba(37, 99, 235, 0.1);
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.stats-icon i {
+    color: var(--primary-color);
+    font-size: 1.75rem;
+}
+
+.stats-info h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+    font-weight: 700;
+}
+
+.stats-info p {
+    margin-bottom: 0;
+    color: var(--muted-text);
+    font-weight: 500;
+}
+
+/* Contributors */
+.contributor-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contributor-list .list-group-item {
+    padding: 0.75rem 0;
+    border-color: #f0f0f0;
+}
+
+.contributor-link {
+    color: var(--text-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contributor-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.contributor-item {
+    padding: 0.75rem 0;
+}
+
+.contribution-bar-container {
+    position: relative;
+    width: 150px;
+    height: 8px;
+    background-color: var(--contributor-bar-bg);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+}
+
+.contribution-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--contributor-bar-fill);
+    border-radius: 4px;
+}
+
+.contribution-count {
+    position: absolute;
+    right: -45px;
+    top: -4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* Chart */
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin-bottom: 2rem;
+}
+
+/* Table */
+.custom-table {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.custom-table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Rate limit info */
+.rate-limit-info {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    color: var(--muted-text);
+    display: flex;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    color: var(--muted-text);
+    font-size: 0.875rem;
+    margin-top: 3rem;
+}
+
+/* Animation */
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Example link */
+.example-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.example-link:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .stats-card {
+        margin-bottom: 1rem;
+    }
+    
+    .contribution-bar-container {
+        width: 100px;
+    }
+    
+    .chart-container {
+        height: 250px;
+    }
+}
